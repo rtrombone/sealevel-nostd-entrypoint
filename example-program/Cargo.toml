@@ -1,21 +1,21 @@
 [package]
-name = "solana-nostd-example-program"
+name = "sealevel-nostd-example-program"
 version = "0.1.0"
 edition = "2021"
-description = "An example usage of solana-nostd-entrypoint"
-license = "MIT OR Apache-2.0"
+description = "An example usage of sealevel-nostd-entrypoint"
+license = "Apache-2.0"
 authors = [
     "Cavey Cool <caveycool@gmail.com>",
     "Magnetar Fields <0xMAGNETAR@proton.me>",
 ]
-repository = "https://github.com/cavemanloverboy/solana-nostd-entrypoint"
+repository = "https://github.com/rtrombone/sealevel-nostd-entrypoint"
 
 [lib]
 crate-type = ["cdylib", "lib"]
 
 [dependencies]
 solana-program = { workspace = true }
-solana-nostd-entrypoint = { workspace = true }
+sealevel-nostd-entrypoint = { workspace = true }
 # solana-pubkey = { git = "https://github.com/anza-xyz/agave.git" }
 # solana-program-error = { git = "https://github.com/anza-xyz/agave.git" }
 

@@ -1,11 +1,10 @@
 [workspace]
-members = ["solana-nostd-entrypoint", "example-program"]
+members = ["sealevel-nostd-entrypoint", "example-program"]
 resolver = "2"
 
 
 [workspace.dependencies]
-solana-nostd-entrypoint = { path = "./solana-nostd-entrypoint" }
-peregrine-alloc = { path = "./peregrine-alloc" }
+sealevel-nostd-entrypoint = { path = "./sealevel-nostd-entrypoint" }
 solana-program = "2"
 solana-program-test = "2"
 solana-sdk = "2"
