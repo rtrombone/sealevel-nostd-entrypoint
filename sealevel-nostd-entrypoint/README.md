@@ -1,5 +1,9 @@
 # `sealevel-nostd-entrypoint`
 
+> **DISCLAIMER: This package is a fork of [solana-nostd-entrypoint]. Its only
+> modification is upgrading [solana-program] to version ^2.0. If your program
+> only needs Solana ^1.18, you should use [solana-nostd-entrypoint] instead.**
+
 The entrypoint function in `solana_program` is grossly inefficient. With an empty `process_instruction` function, it uses upwards of 8000 bpf cus when the program receives 32 non-duplicate accounts. We use a new `NoStdAccountInfo` struct whose layout is consistent with that in the vm flat buffer `input: *mut u8`; unlike the usual entrypoint, it reads everything with no copies and no allocations.
 
 This crate also includes a simple reference program that invokes another program. See `lib.rs`:
@@ -72,3 +76,6 @@ pub mod entrypoint {
     }
 }
 ```
+
+[solana-nostd-entrypoint]: https://crates.io/crates/solana-nostd-entrypoint
+[solana-program]: https://crates.io/crates/solana-program
