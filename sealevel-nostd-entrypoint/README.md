@@ -1,4 +1,4 @@
-# `solana-nostd-entrypoint`
+# `sealevel-nostd-entrypoint`
 
 The entrypoint function in `solana_program` is grossly inefficient. With an empty `process_instruction` function, it uses upwards of 8000 bpf cus when the program receives 32 non-duplicate accounts. We use a new `NoStdAccountInfo` struct whose layout is consistent with that in the vm flat buffer `input: *mut u8`; unlike the usual entrypoint, it reads everything with no copies and no allocations.
 

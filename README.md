@@ -1,11 +1,11 @@
-# `solana-nostd-entrypoint`
+# `sealevel-nostd-entrypoint`
 
 The entrypoint function in `solana_program` is grossly inefficient. With an empty `process_instruction` function, it uses upwards of 8000 bpf instructions when the program receives 32 non-duplicate accounts. We use a new `NoStdAccountInfo` struct whose layout is consistent with that in the vm input memory region; unlike the usual entrypoint, it reads everything with no copies and no allocations.
 
 This crate also includes a simple reference program that invokes another program. See `example_program/lib.rs`:
 
 ```rust
-use solana_nostd_entrypoint::{
+use sealevel_nostd_entrypoint::{
     basic_panic_impl, entrypoint_nostd, noalloc_allocator,
     solana_program::{
         entrypoint::ProgramResult, log, program_error::ProgramError, pubkey::Pubkey, system_program,
@@ -15,7 +15,7 @@ use solana_nostd_entrypoint::{
 
 entrypoint_nostd!(process_instruction, 32);
 
-pub const ID: Pubkey = solana_nostd_entrypoint::solana_program::pubkey!(
+pub const ID: Pubkey = sealevel_nostd_entrypoint::solana_program::pubkey!(
     "EWUt9PAjn26zCUALRRt56Gutaj52Bpb8ifbf7GZX3h1k"
 );
 
