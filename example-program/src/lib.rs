@@ -1,5 +1,5 @@
 #![allow(unexpected_cfgs)]
-use solana_nostd_entrypoint::{
+use sealevel_nostd_entrypoint::{
     basic_panic_impl, entrypoint_nostd, noalloc_allocator,
     solana_program::{
         entrypoint::ProgramResult, log, program_error::ProgramError,
