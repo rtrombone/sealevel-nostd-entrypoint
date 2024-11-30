@@ -1,14 +1,15 @@
 [package]
 name = "sealevel-nostd-entrypoint"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
-description = "A zerocopy, no_alloc/no_std entrypoint for solana programs."
+description = "A zerocopy, no_alloc/no_std entrypoint for Solana 2.0 programs"
 license = "Apache-2.0"
 authors = [
     "Cavey Cool <caveycool@gmail.com>",
     "Magnetar Fields <0xMAGNETAR@proton.me>",
 ]
 repository = "https://github.com/rtrombone/sealevel-nostd-entrypoint"
+rust-version = "1.75"
 
 [lib]
 crate-type = ["cdylib", "lib"]
